@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - apiKey
+      - modelId
+    properties:
+      apiKey:
+        type: string
+        description: Fish Audio API key
+      modelId:
+        type: string
+        description: Fish Audio model ID
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'python', args: ['app.py'], env: { API_KEY: config.apiKey, MODEL_ID: config.modelId } })
+  exampleConfig:
+    apiKey: your_fish_audio_api_key
+    modelId: speech-1.5
