@@ -1,4 +1,5 @@
 # Fish Audio Python MCP 服务
+[![smithery badge](https://smithery.ai/badge/@nei10u/fishaudio-mcp)](https://smithery.ai/server/@nei10u/fishaudio-mcp)
 
 这是一个使用 Fish Audio API 实现的文字转语音 MCP 服务。通过这个服务，您可以将文本转换为自然的人声，支持多种配置选项。
 
@@ -9,6 +10,16 @@
 - 兼容 MCP 协议：可与支持 MCP 的应用无缝集成
 
 ## 安装依赖
+
+### Installing via Smithery
+
+To install fishaudio-mcp for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@nei10u/fishaudio-mcp):
+
+```bash
+npx -y @smithery/cli install @nei10u/fishaudio-mcp --client claude
+```
+
+### 手动安装
 
 ```bash
 pip install -r requirements.txt
